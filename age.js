@@ -10,7 +10,6 @@ function calculate() {
   inputData = input.value;
 
   if (inputData !== "") {
-
     inputArray = inputData.split("-");
     [year, month, day] = inputArray;
     year = Number(year);
@@ -21,14 +20,13 @@ function calculate() {
 
     current = new Date();
     currentYear = current.getFullYear();
-    currentMonth = current.getMonth() + 1; 
+    currentMonth = current.getMonth() + 1;
     currentDate = current.getDate();
 
     if (day === currentDate && month === currentMonth) {
       let birthday = currentYear - year;
       output.innerHTML = `Congratulation! Today Is your birthday you are ${birthday} Years Old. `;
     } else {
-
       if (day > currentDate) {
         Newdate = currentDate + 30;
         day = Newdate - day;
@@ -47,7 +45,6 @@ function calculate() {
 
       output.innerHTML = `${year} Years ${month} Month ${day} Days.`;
     }
-
   } else {
     alert("Please Input your Birthday");
   }
